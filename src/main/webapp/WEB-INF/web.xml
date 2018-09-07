@@ -12,6 +12,16 @@
         <servlet-name>RegistServlet</servlet-name>
         <url-pattern>/RegistServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ActiveServlet</servlet-name>
+        <servlet-class>com.imooc.web.servlet.ActiveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ActiveServlet</servlet-name>
+        <url-pattern>/ActiveServlet</url-pattern>
+    </servlet-mapping>
+
     <welcome-file-list>
         <welcome-file>regist.jsp</welcome-file>
     </welcome-file-list>

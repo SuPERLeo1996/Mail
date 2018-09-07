@@ -10,5 +10,9 @@ import java.sql.SQLException;
  * @Description:
  */
 public interface UserService {
-    void regist(User user) throws SQLException;
+    void regist(User user) throws Exception;
+
+    User findByCode(String code) throws Exception;
+
+    void update(User user) throws Exception;
 }

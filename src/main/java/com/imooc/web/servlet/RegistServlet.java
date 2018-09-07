@@ -40,9 +40,13 @@ public class RegistServlet extends javax.servlet.http.HttpServlet {
             user.setCode(code);
             //调用业务层数据
             UserService userService = new UserServiceImpl();
-
             userService.regist(user);
-        } catch (SQLException e) {
+
+            //页面跳转
+            request.setAttribute("msg","您已注册成功，请到邮箱激活");
+            request.getRequestDispatcher("/msg.jsp").forward(request,response);
+
+        } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException();
         }
